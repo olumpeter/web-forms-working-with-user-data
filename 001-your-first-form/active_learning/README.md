@@ -209,10 +209,10 @@ module will help you to master the rest.
 <dl>
   Use the following URL:
   <dd>
-    https://olumpeter.github.io/web-forms-working-with-user-data/your-first-form/active_learning/
+    https://olumpeter.github.io/web-forms-working-with-user-data/001-your-first-form/active_learning/
   </dd>
   or click the following link:
   <dd>
-    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/your-first-form/active_learning/">Visit website</a>
+    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/001-your-first-form/active_learning/">Visit website</a>
   </dd>
 </dl>
