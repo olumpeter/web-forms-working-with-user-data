@@ -180,13 +180,13 @@ form elements. You've met some of these already, but below is a list of
 those common attributes, for your reference:
 
 <dl>
-  `<dt>autofocus (default is false)</dt>`
+  <dt>`autofocus` (default is false)</dt>
   <dd>This Boolean attribute lets you specify that the element should automatically have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.</dd>
-  `<dt>disabled (disabled)</dt>`
+  <dt>`disabled` (disabled)</dt>
   <dd>This Boolean attribute indicates that the user cannot interact with the element. If this attribute is not specified, the element inherits its setting from the containing element, for example, <fieldset>; if there is no containing element with the disabled attribute set, then the element is enabled.</dd>
-  `<dt>name</dt>`
+  <dt>`name`</dt>
   <dd>The name of the element; this is submitted with the form data.</dd>
-  `<dt>value</dt>`
+  <dt>`value`</dt>
   <dd>The element's initial value.</dd>
 </dl>
 
