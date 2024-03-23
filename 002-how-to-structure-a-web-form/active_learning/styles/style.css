@@ -1,0 +1,85 @@
+body {
+    background-color: #fff;
+    color: #333;
+    font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+#payment_form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    margin-bottom: 50px;
+}
+
+#payment_form  h3,  #payment_form  h4 {
+    margin-top: 0;
+}
+
+#payment_form ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#payment_form  fieldset {
+    width: 250px;
+    border: 1px solid #999;
+}
+
+#payment_form input {
+    font: 1em sans-serif;
+    width: 250px;
+    border: 1px solid #999;
+}
+
+#payment_form button {
+    margin: 20px 0 0 0;
+}
+
+#payment_form label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#payment_form input[type="radio"] {
+    width: auto;
+    border: none;
+}
+
+#test_your_skills ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#test_your_skills form {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#test_your_skills label{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#test_your_skills input, #test_your_skills textarea{
+    position: relative;
+    display: inline-block;
+    max-width: 250px;
+    min-width: 250px
+}
