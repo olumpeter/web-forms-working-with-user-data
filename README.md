@@ -5,3 +5,4 @@ This repository carry web forms scripting projects that were done for active lea
 
 1. [Your first form](https://github.com/olumpeter/web-forms-working-with-user-data/tree/main/001-your-first-form/active_learning/)
 1. [How to structure a web form](https://github.com/olumpeter/web-forms-working-with-user-data/tree/main/002-how-to-structure-a-web-form/active_learning/)
+1. [Basic native form controls](https://github.com/olumpeter/web-forms-working-with-user-data/tree/main/003-basic-native-form-controls/active_learning/)
