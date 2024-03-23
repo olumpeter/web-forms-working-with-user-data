@@ -117,11 +117,11 @@ The radio button isn't actually a button, despite its name; let's move on and
 look at actual buttons! There are three input types that produce buttons:
 
 <dl>
-  <code><dt>submit</dt></code>
+  <dt>submit</dt>
   <dd>Sends the form data to the server. For <button> elements, omitting the type attribute (or an invalid value of type) results in a submit button.</dd>
-  <code><dt>reset</dt></code>
+  <dt>reset</dt>
   <dd>Resets all form widgets to their default values.</dd>
-  <code><dt>button</dt></code>
+  <dt>button</dt>
   <dd>Buttons that have no automatic effect but can be customized using JavaScript code.</dd>
 </dl>
 
