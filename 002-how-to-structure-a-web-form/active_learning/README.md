@@ -9,7 +9,7 @@ you can build any kind of basic form using dedicated form elements and
 attributes. Using the correct structure when building an HTML form will help 
 ensure that the form is both usable and accessible.
 
-## The ` &lt;form&gt; ` element
+## The `&lt;form&gt;` element
 
 The `&lt;form&gt;`  element formally defines a form and attributes that 
 determine the form's behavior. Each time you want to create an HTML form, you 
