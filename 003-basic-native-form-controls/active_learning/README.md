@@ -196,8 +196,6 @@ This article has covered the older input types — the original set introduced
 in the early days of HTML that is well-supported in all browsers. In the 
 next section, we'll take a look at the more modern values of the type attribute.
 
-
-
 ## How you can access this live website
 
 <dl>
