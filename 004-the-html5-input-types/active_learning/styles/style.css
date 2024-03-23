@@ -1,0 +1,41 @@
+h1, h2, h3 {
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+label, output {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+textarea, input {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+#submit_button {
+    display: flex;
+    margin-top: 20px;
+    width: 250px;
+    justify-content: right;
+}
+

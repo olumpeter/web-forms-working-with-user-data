@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Peter Olum">
+
+    <meta name="description" content="
+    # The HTML5 input types
+
+    ## Email address field
+
+    This type of field is set using the value `email` for the `type` attribute.
+
+    ## Search field
+
+    Search fields are intended to be used to create search boxes on pages and 
+    apps. This type of field is set by using the value search for the `type` 
+    attribute.
+
+    The main difference between a `text` field and a `search` field is how the 
+    browser styles its appearance. Often, search fields are rendered with 
+    rounded corners; they also sometimes display an 'Ⓧ', which clears the 
+    field of any value when clicked. Additionally, on devices with dynamic 
+    keyboards, the keyboard's enter key may read 'search', or display a 
+    magnifying glass icon.
+
+    Another worth-noting feature is that the values of a search field can be 
+    automatically saved and re-used to offer auto-completion across multiple 
+    pages of the same website; this tends to happen automatically in most modern 
+    browsers.
+
+    ## Phone number field
+
+    A special field for filling in phone numbers can be created using `tel` as 
+    the value of the type attribute.
+
+    Due to the wide variety of phone number formats around the world, this type 
+    of field does not enforce any constraints on the value entered by a user 
+    (this means it may include letters, etc.).
+
+    ## URL field
+
+    A special type of field for entering URLs can be created using the value 
+    `url` for the `type` attribute.
+
+    It adds special validation constraints to the field. The browser will report 
+    an error if no protocol (such as http:) is entered, or if the URL is otherwise 
+    malformed. On devices with dynamic keyboards, the default keyboard will often 
+    display some or all of the colon, period, and forward slash as default keys.
+
+    ## Numeric field
+
+    Controls for entering numbers can be created with an `<input>` `type` of 
+    `number`. This control looks like a text field but allows only floating-point 
+    numbers, and usually provides buttons in the form of a spinner to increase 
+    and decrease the value of the control. On devices with dynamic keyboards, the 
+    numeric keyboard is generally displayed.
+
+    With the `number` input type, you can constrain the minimum and maximum 
+    values allowed by setting the `min` and `max` attributes.
+
+    You can also use the step attribute to set the increment increase and 
+    decrease caused by pressing the spinner buttons. By default, the number 
+    input type only validates if the number is an integer. To allow float numbers, 
+    specify step='any'. If omitted, the step value defaults to 1, meaning only 
+    whole numbers are valid.
+
+    ## Slider controls
+
+    Another way to pick a number is to use a **slider**. You see these quite often 
+    on sites like house-buying sites where you want to set a maximum property 
+    price to filter by.
+
+    One problem with sliders is that they don't offer any kind of visual 
+    feedback as to what the current value is. This is why we've included an 
+    `<output>` element to contain the current value. You could display an input 
+    value or the output of a calculation inside any element, but `<output>` is 
+    special — like `<label>` — and it can take a for attribute that allows you to 
+    associate it with the element or elements that the output value came from.
+
+    To actually display the current value, and update it as it changed, you must 
+    use JavaScript, but this is relatively easy to do.
+
+    ## Date and time pickers
+
+    Gathering date and time values has traditionally been a nightmare for web 
+    developers. For a good user experience, it is important to provide a calendar 
+    selection UI, enabling users to select dates without necessitating context 
+    switching to a native calendar application or potentially entering them in 
+    differing formats that are hard to parse. The last minute of the previous 
+    millennium can be expressed in the following different ways, for example: 
+    1999/12/31, 23:59 or 12/31/99T11:59PM.
+
+    HTML date controls are available to handle this specific kind of data, 
+    providing calendar widgets and making the data uniform.
+
+    A date and time control is created using the `<input>` element and an 
+    appropriate value for the `type` attribute, depending on whether you wish to 
+    collect dates, times, or both.
+
+    ### datetime-local
+
+    `<input type='datetime-local'>` creates a widget to display and pick a date 
+    with time with no specific time zone information.
+
+    ## Color picker control
+
+    Colors are always a bit difficult to handle. There are many ways to express 
+    them: RGB values (decimal or hexadecimal), HSL values, keywords, and so on.
+
+    A `color` control can be created using the `<input>` element with its `type` 
+    attribute set to the value `color`.
+
+    Clicking a color control generally displays the operating system's default 
+    color-picking functionality for you to choose.
+
+    The value returned is always a lowercase 6-value hexadecimal color.
+
+    ## Summary
+
+    That brings us to the end of our tour of the HTML5 form input types. There 
+    are a few other control types that cannot be easily grouped together due to 
+    their very specific behaviors, but which are still essential to know about. We 
+    cover those in the next article.
+    ">
+
+    <title>The HTML5 input types</title>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="scripts/script.js" defer></script>
+
+  </head>
+
+  <body>
+    <h1>The HTML5 input types</h1>
+    <div>
+      <h2>Email address field</h2>
+      <form>
+        <fieldset>
+          <legend>
+            <strong>Single email example</strong>
+          </legend>
+          <ul>
+            <li>
+              <label for="comment">Your comment:</label>
+              <textarea id="comment" rows="6">I'm a comment</textarea>
+            </li>
+            <li>
+              <label for="email">Your email:</label>
+              <input type="email" id="email" name="email" value="">
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <strong>Multiple email example</strong>
+          </legend>
+          <ul>
+            <li>
+              <label for="comment">Your comment:</label>
+              <textarea id="comment" rows="6">I'm a comment</textarea>
+            </li>
+            <li>
+              <label for="email">Your email:</label>
+              <input type="email" id="email" name="email" value="" multiple>
+            </li>
+          </ul>
+        </fieldset>
+        <p id="submit_button">
+          <button type="submit">Send now</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h2>Search field</h2>
+      <form>
+        <fieldset>
+          <legend>
+            <strong>Default Search field</strong>
+          </legend>
+          <input type="search" id="search" name="search" value="has a value">
+          <button type="submit">Search</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <strong>Focused Search field</strong>
+          </legend>
+          <input type="search" id="search" name="search" value="has a value" autofocus>
+          <button type="submit">Search</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <strong>Disabled Search field</strong>
+          </legend>
+          <input type="search" id="search" name="search" value="has a value" disabled>
+          <button type="submit">Search</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <h2>Phone number field</h2>
+      <form >
+        <fieldset>
+          <legend>
+            <strong>A special field for filling in phone numbers</strong>
+          </legend>
+          <label for="telephone">
+            <span>Telephone:</span>
+          </label>
+          <input type="tel" id="telephone" name="telephone" value="0713729706">
+        </fieldset>
+        <p id="submit_button">
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h2>URL field</h2>
+      <form >
+        <fieldset>
+          <legend>
+            <strong>A special type of field for entering URLs </strong>
+          </legend>
+          <label for="url">
+            <span>URL:</span>
+          </label>
+          <input type="url" id="url" name="url" value="https://www.olumcodecamp.com">
+        </fieldset>
+        <p id="submit_button">
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h2>Numeric field</h2>
+      <form >
+        <fieldset>
+          <legend>
+            <strong>Controls for entering numbers</strong>
+          </legend>
+          <label for="age">
+            <span>Age:</span>
+            <input type="number" id="age" name="age" value="" min="1" max="120" step="1">
+          </label>
+            <span>Height in meters:</span>
+            <input type="number" id="height" name="height" value="" min="1" max="3" step="0.01">
+          </label>
+        </fieldset>
+        <p id="submit_button">
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h2>Slider controls</h2>
+      <form >
+        <fieldset>
+          <legend>
+            <strong>Another way to pick a number</strong>
+          </legend>
+          <label for="house_price_input">
+            <span>Choose a maximum house price:</span>
+            <input type="range" id="house_price_input" name="house_price" value="250000" min="1000" max="500000" step="100">
+            <output id="house_price_output" for="house_price_input"></output>
+          </label>
+        </fieldset>
+        <p id="submit_button">
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h2>Date and time pickers</h2>
+      <form >
+        <fieldset>
+          <legend>
+            <strong>A date and time control</strong>
+          </legend>
+          <label for="datetime">
+            <span>Choose a date and time for your party:</span>
+            <input type="datetime-local" id="datetime" name="datetime" value="" placeholder="dd/mm/yyyy --:--">
+          </label>
+        </fieldset>
+
+        <p id="submit_button">
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h2>Color picker control</h2>
+      <form >
+        <fieldset>
+          <legend>
+            <strong>A color control</strong>
+          </legend>
+          <label for="color">
+            <span>Choose a color:</span>
+            <input type="color" id="color" name="color" value="color">
+          </label>
+        </fieldset>
+
+        <p id="submit_button">
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
+
