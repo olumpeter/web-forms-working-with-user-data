@@ -119,13 +119,10 @@ look at actual buttons! There are three input types that produce buttons:
 <dl>
   <code><dt>submit</dt></code>
   <dd>Sends the form data to the server. For <button> elements, omitting the type attribute (or an invalid value of type) results in a submit button.</dd>
-  </dl>
   <code><dt>reset</dt></code>
   <dd>Resets all form widgets to their default values.</dd>
-  </dl>
   <code><dt>button</dt></code>
   <dd>Buttons that have no automatic effect but can be customized using JavaScript code.</dd>
-  </dl>
 </dl>
 
 Then we also have the `<button>` element itself. This can take a `type` 
@@ -185,16 +182,12 @@ those common attributes, for your reference:
 <dl>
   <code><dt>autofocus (default is false)</dt></code>
   <dd>This Boolean attribute lets you specify that the element should automatically have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.</dd>
-  </dl>
   <code><dt>disabled (disabled)</dt></code>
   <dd>This Boolean attribute indicates that the user cannot interact with the element. If this attribute is not specified, the element inherits its setting from the containing element, for example, <fieldset>; if there is no containing element with the disabled attribute set, then the element is enabled.</dd>
-  </dl>
   <code><dt>name</dt></code>
   <dd>The name of the element; this is submitted with the form data.</dd>
-  </dl>
   <code><dt>value</dt></code>
   <dd>The element's initial value.</dd>
-  </dl>
 </dl>
 
 ## Summary
