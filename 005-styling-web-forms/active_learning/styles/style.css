@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+.controlling_os_level_styling input {
+    appearance: none;
+}
+
+.taming_search_boxes input[type='search'] {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.taming_search_boxes #search_2,
+.taming_search_boxes #search_3 {
+    appearance: none;
+}
+
+
+.taming_search_boxes #search_3 {
+    border: 2px solid black;
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px red;
+    height: 32px;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.styling_checkboxes_and_radio_buttons input[type='checkbox'] {
+    appearance: none;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+}
+
+.styling_checkboxes_and_radio_buttons input[type='checkbox']::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.2em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+}
+
+.styling_checkboxes_and_radio_buttons input[type="checkbox"]:checked::before {
+    /* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+}
+
+.styling_checkboxes_and_radio_buttons input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+/* 
+    :checked — the checkbox (or radio button) is in a checked state — the user has clicked/activated it.
+    :disabled — the checkbox (or radio button) is in a disabled state — it cannot be interacted with.
+*/
+
+.styling_checkboxes_and_radio_buttons fieldset {
+    margin-bottom: 20px;
+}
+
+.styling_checkboxes_and_radio_buttons input[type='radio'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    vertical-align: -2px;
+    outline: none;
+}
+
+.styling_checkboxes_and_radio_buttons input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+
+.styling_checkboxes_and_radio_buttons input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+       
+/* toggle in label designing */
+.toggle_switch .toggle {
+    position : relative ;
+    display : inline-block;
+    width : 100px;
+    height : 52px;
+    background-color: red;
+    border-radius: 30px;
+    border: 2px solid gray;
+}
+       
+/* After slide changes */
+.toggle_switch .toggle::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 1px; 
+    left: 1px;
+    transition:  all 0.5s;
+}
+       
+/* Toggle text */
+.toggle_switch p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+       
+/* Checkbox checked effect */
+.toggle_switch .checkbox:checked + .toggle::after {
+    left : 49px; 
+}
+       
+/* Checkbox checked toggle label bg color */
+.toggle_switch .checkbox:checked + .toggle {
+    background-color: green;
+}
+       
+/* Checkbox vanished */
+.toggle_switch .checkbox { 
+    display : none;
+}
+
+.ugly_elements form > div {
+    margin-bottom: 20px;
+}
+
+.ugly_elements select {
+    appearance: none;
+}
+
+.ugly_elements label,
+.ugly_elements  select,
+.ugly_elements input,
+.ugly_elements progress,
+.ugly_elements meter,
+.ugly_elements button {
+    display: block;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+.ugly_elements label {
+    margin-bottom: 5px;
+}
+
+.ugly_elements .select_wrapper {
+    position: relative;
+}
+
+.ugly_elements button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.ugly_elements .select_wrapper::after {
+    content: '▼';
+    font-size: 1rem;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+}
+
+.ugly_elements input[type="text"], 
+.ugly_elements input[type="datetime-local"], 
+.ugly_elements input[type="color"], 
+.ugly_elements select {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Peter Olum">
+
+    <meta name="description" content="
+
+    # Styling web forms
+
+    ## Challenges in styling form widgets
+
+    ### Types of widgets
+
+    #### Easy-to-style
+
+    1. `<form>`
+    1. `<fieldset>` and `<legend>`
+    1. Single-line text `<input>s` (e.g. type text, url, email), except for `<input type='search'>`
+    1. Multi-line `<textarea>`
+    1. Buttons (both `<input>` and `<button>`)
+    1. `<label>`
+    1. `<output>`
+
+    #### Harder-to-style (**The bad**)
+
+    1. Checkboxes and radio buttons
+    1. <input type='search'>
+
+    #### Having internals can't be styled in CSS alone (**The ugly**)
+
+    - `<input type='color'>`
+    - Date-related controls such as `<input type='datetime-local'>`
+    - `<input type='range'>`
+    - `<input type='file'>`
+    - Elements involved in creating dropdown widgets, including `<select>`, `<option>`, `<optgroup>` and `<datalist>`.
+    - `<progress>` and `<meter>`
+
+    For example, the date picker calendar, and the button on `<select>` that 
+    displays an options list when clicked, can't be styled using CSS alone.
+
+    We will see how to handle form widgets which fall into the 'bad' and 'ugly' categories.
+    The types of form control that are more difficult to style.
+
+    ## appearance: controlling OS-level styling
+
+    The styling of web form controls was largely taken from the underlying 
+    operating system, which is part of the problem with customizing the look 
+    of these controls.
+
+    The `appearance` property was created as a way to control what OS- or 
+    system-level styling was applied to web form controls. By far the most 
+    helpful value, and probably the only one you'll use, is none. This stops 
+    any control you apply it to from using system-level styling, as much as 
+    possible, and lets you build up the styles yourself using CSS.
+
+    In most cases, the effect is to remove the stylized border, which makes CSS 
+    styling a bit easier, but isn't really essential. In a couple of cases — search 
+    and radio buttons/checkboxes, it becomes way more useful. We'll look at those now.
+    
+    ">
+
+    <title>The HTML5 input types</title>
+
+    <link href='styles/style.css' rel='stylesheet' type='text/css'>
+
+    <script src='scripts/script.js' defer></script>
+
+  </head>
+
+  <body>
+    <h1>Styling web forms</h1>
+
+    <div class="controlling_os_level_styling">
+      <h2><code>appearance</code>: controlling OS-level styling</h2>
+
+      <form>
+        <p>
+          <label for="search">search: </label>
+          <input type="search" id="search" name="search" />
+        </p>
+        <p>
+          <label for="text">text: </label>
+          <input type="text" id="text" name="text" />
+        </p>
+        <p>
+          <label for="date">date: </label>
+          <input type="datetime-local" id="date" name="date" />
+        </p>
+        <p>
+          <label for="radio">radio: </label>
+          <input type="radio" id="radio" name="radio" />
+        </p>
+        <p>
+          <label for="checkbox">checkbox: </label>
+          <input type="checkbox" id="checkbox" name="checkbox" />
+        </p>
+        <p><input type="submit" value="submit" /></p>
+        <p><input type="button" value="button" /></p>
+      </form> 
+    </div>   
+
+    <div class="taming_search_boxes">
+      <h3>Taming search boxes</h3>
+
+      <form>
+        <p>  
+          <label for="search_1">
+            Search 1:<input type="search" id="search_1" name="search_1">
+          </label>
+        </p>
+  
+        <p>
+          <label for="search_2">
+            Search 2:<input type="search" id="search_2" name="search_2">
+          </label>
+        </p>
+  
+        <p>
+          <label for="search_3">
+            Search 3:<input type="search" id="search_3" name="search_3">
+          </label>
+        </p>
+      </form>
+    </div>
+
+    <div class="styling_checkboxes_and_radio_buttons">
+      <h3>Styling checkboxes and radio buttons</h3>
+
+      <form>
+        <h4>Custom check box styling</h4>
+
+        <fieldset>
+          <legend>Fruit preferences</legend>
+  
+          <p>
+            <label>
+              <input type="checkbox" name="fruit" value="cherry">
+              I like cherry
+            </label>
+          </p>
+  
+          <p>
+            <label>
+              <input type="checkbox" name="fruit" value="banana" disabled>
+              I can't like banana
+            </label>
+          </p>
+  
+          <p>
+            <label for="fruit_strawberry">
+              <input type="checkbox" name="fruit" value="strawberry">
+              I like strawberry
+            </label>
+          </p>
+        </fieldset>
+
+        <h4>Custom radio button styling</h4>
+
+        <fieldset>
+          <legend>Choose your favourite fruit</legend>
+
+          <p>
+            <label>
+              <input type="radio" name="fruit" value="cherry">
+              Cherry
+            </label>
+          </p>
+  
+          <p>
+            <label>
+              <input type="radio" name="fruit" value="banana" disabled>
+              Banana
+            </label>
+          </p>
+  
+          <p>
+            <label for="fruit_strawberry">
+              <input type="radio" name="fruit" value="strawberry">
+              Strawberry
+            </label>
+        </fieldset>
+
+        <h4>A toggle switch</h4>
+
+        <div class="toggle_switch">
+          <input type="checkbox" id="switch" class="checkbox" />
+           
+          <label for="switch" class="toggle">
+              <p>
+                  <span>OFF</span>
+                  <span>ON</span>
+              </p>
+          </label>
+        </div>
+      </form>
+    </div>
+
+    <div class="ugly_elements">
+      <h2>What can be done about the "ugly" elements?</h2>
+
+      <form>
+        <div>
+          <label for="select_box">Select box: </label>
+          <div class="select_wrapper">
+            <select id="select" name="select">
+              <option value="banana">Banana</option>
+              <option value="cherry">Cherry</option>
+              <option value="lemon">Lemon</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="datalist">&quot;Favorite fruit?&quot; datalist:</label>
+          <input type="text" id="my_fruit" name="my_fruit" list="my_suggestion">
+          <datalist id="my_suggestion">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option> 
+          </datalist>
+        </div>
+
+        <div>
+          <label>Datetime local:</label>
+          <input type="datetime-local" id="datetime_local" name="datetime_local">
+        </div>
+
+        <div>
+          <label for="range">Range:</label>
+          <input type="range" id="range" name="range">
+        </div>
+
+        <div>
+          <label for="color">Color:</label>
+          <input type="color" id="color" name="color">
+        </div>
+
+        <div>
+          <label for="file">File picker:</label>
+          <input type="file" id="file" name="file">
+        </div>
+
+        <div>
+          <label>Progress</label>
+          <progress min="0" max="100" id="progress" name="progress" value="75">75/100</progress>
+        </div>
+
+        <div>
+          <label for="meter">Meter:</label>
+          <meter id="meter" min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+        </div>
+  
+        <div>
+          <button>Submit?</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
