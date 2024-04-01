@@ -197,10 +197,10 @@ different — client-side form validation.
 <dl>
   Use the following URL:
   <dd>
-    https://olumpeter.github.io/web-forms-working-with-user-data/005-styling-web-forms/active_learning/
+    https://olumpeter.github.io/web-forms-working-with-user-data/006-ui-pseudo-classes/active_learning/
   </dd>
   or click the following link:
   <dd>
-    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/005-styling-web-forms/active_learning/">Visit website</a>
+    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/006-ui-pseudo-classes/active_learning/">Visit website</a>
   </dd>
 </dl>
