@@ -55,10 +55,10 @@ and radio buttons/checkboxes, it becomes way more useful. We'll look at those no
 <dl>
   Use the following URL:
   <dd>
-    https://olumpeter.github.io/web-forms-working-with-user-data/004-the-html5-input-types/active_learning/
+    https://olumpeter.github.io/web-forms-working-with-user-data/005-styling-web-forms/active_learning/
   </dd>
   or click the following link:
   <dd>
-    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/004-the-html5-input-types/active_learning/">Visit website</a>
+    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/005-styling-web-forms/active_learning/">Visit website</a>
   </dd>
 </dl>
