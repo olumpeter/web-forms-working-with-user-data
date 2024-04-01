@@ -121,10 +121,10 @@ cover those in the next article.
 <dl>
   Use the following URL:
   <dd>
-    https://olumpeter.github.io/web-forms-working-with-user-data/003-basic-native-form-controls/active_learning/
+    https://olumpeter.github.io/web-forms-working-with-user-data/004-the-html5-input-types/active_learning/
   </dd>
   or click the following link:
   <dd>
-    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/003-basic-native-form-controls/active_learning/">Visit website</a>
+    <a href="https://olumpeter.github.io/web-forms-working-with-user-data/004-the-html5-input-types/active_learning/">Visit website</a>
   </dd>
 </dl>
