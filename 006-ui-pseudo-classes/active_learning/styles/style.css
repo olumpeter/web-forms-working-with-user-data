@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body > div {
+    max-width: 480px;
+    margin: 20px auto;
+}
+
+.required_inputs button, 
+.required_inputs label, 
+.required_inputs input {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+.required_inputs label {
+    display: block;
+    width: 100%;
+}
+
+.required_inputs fieldset {
+    padding: 10px 30px 0;
+}
+
+.required_inputs fieldset > div {
+    margin-bottom: 20px;
+}
+
+.required_inputs legend {
+    color: white;
+    background: black;
+    padding: 5px 10px;
+}
+
+.required_inputs button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.required_inputs input:required {
+    border: 1px solid red;
+}
+
+.required_inputs input:optional {
+    border: 1px solid blue;
+}
+
+
+.generated_content button, 
+.generated_content label, 
+.generated_content input {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+.generated_content label {
+    display: block;
+    width: 100%;
+}
+
+.generated_content fieldset {
+    padding: 10px 30px 0;
+}
+
+.generated_content fieldset > div {
+    margin-bottom: 20px;
+}
+
+.generated_content legend {
+    color: white;
+    background: black;
+    padding: 5px 10px;
+}
+
+.generated_content button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.generated_content input + span {
+    position: relative;
+}
+
+.generated_content input:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: 'required';
+    color: white;
+    background: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px;
+}
+
+.generated_content fieldset > div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.valid_invalid input + span {
+    position: relative;
+  }
+
+.valid_invalid input:invalid + span::before {
+    content: '✖';
+    color: red;
+  }
+
+.valid_invalid input:valid + span::before {
+    content: '✓';
+    color: green;
+}
+
+.valid_invalid input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+}
+
+.valid_invalid input:required {
+    border: 1px solid red;
+}
+
+.valid_invalid input:optional {
+    border: 1px solid black;
+}
+
+.valid_invalid input:hover, 
+.valid_invalid input:focus {
+    background-color: #eee;
+}
+
+
+.enabled_disabled_read_only_read_write fieldset {
+    padding: 10px 30px 0;
+    margin-bottom: 20px;
+}
+
+.enabled_disabled_read_only_read_write legend {
+    color: white;
+    background: black;
+    padding: 5px 10px;
+}
+
+.enabled_disabled_read_only_read_write fieldset > div {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.enabled_disabled_read_only_read_write button, 
+.enabled_disabled_read_only_read_write label, 
+.enabled_disabled_read_only_read_write input[type="text"] {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+  }
+
+.enabled_disabled_read_only_read_write input {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+}
+
+.enabled_disabled_read_only_read_write input:hover, input:focus {
+    background-color: #eee;
+}
+
+.enabled_disabled_read_only_read_write input[type="text"]:disabled {
+      background: #eee;
+      border: 1px solid #ccc;
+}
+
+.enabled_disabled_read_only_read_write .disabled-label {
+    color: #aaa;
+}
+
+.enabled_disabled_read_only_read_write button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.read_only_and_read_write fieldset {
+    padding: 10px 30px 0;
+    margin-bottom: 20px;
+}
+
+.read_only_and_read_write legend {
+    color: white;
+    background: black;
+    padding: 5px 10px;
+}
+
+.read_only_and_read_write fieldset > div {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.read_only_and_read_write button, 
+.read_only_and_read_write label, 
+.read_only_and_read_write input[type="text"], 
+.read_only_and_read_write textarea {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+}
+
+.read_only_and_read_write input[type="text"], 
+.read_only_and_read_write textarea {
+    width: 50%
+}
+
+.read_only_and_read_write textarea {
+    height: 110px;
+    resize: none;
+}
+
+.read_only_and_read_write label {
+    width: 40%;
+  }
+
+.read_only_and_read_write input:hover, 
+.read_only_and_read_write input:focus, 
+.read_only_and_read_write textarea:hover, 
+.read_only_and_read_write textarea:focus {
+    background-color: #eee;
+}
+
+.read_only_and_read_write button {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.read_only_and_read_write input:read-only, 
+.read_only_and_read_write textarea:read-only {
+    border: 0;
+    box-shadow: none;
+    background-color: white;
+}
+
+.read_only_and_read_write textarea:read-write {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+}
+
+.radio_and_checkbox_states input[type="radio"] {
+    appearance: none;
+}
+
+.radio_and_checkbox_states input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    outline: none;
+}
+
+.radio_and_checkbox_states input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+.radio_and_checkbox_states input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+.radio_and_checkbox_states .default_and_indeterminate .default input ~ span {
+  position: relative;
+}
+
+.radio_and_checkbox_states .default_and_indeterminate .default input:checked ~ span::after {
+    content: 'Default';
+    position: absolute;
+    font-size: 0.7rem;
+    color: white;
+    background-color: black;
+    top: -3px;
+    right: -65px;
+    padding: 5px 10px;
+}
+
+.radio_and_checkbox_states .default_and_indeterminate .indeterminate input[type="radio"]:indeterminate {
+    border: 2px solid red;
+    animation: 0.4s linear infinite alternate border-pulse;
+}
+
+@keyframes border-pulse {
+    from {
+        border: 2px solid red;
+    }
+
+    to {
+        border: 6px solid red;
+    }
+}
