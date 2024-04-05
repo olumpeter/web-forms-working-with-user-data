@@ -1,0 +1,129 @@
+
+body {
+  max-width: 600px;
+  margin: 20px auto;
+  font: 1em sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#validating_forms_using_javascript > div,
+#built_in_form_validation_examples > div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#built_in_form_validation_examples input:invalid {
+    border: 2px dashed red;
+}
+
+#built_in_form_validation_examples input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+#built_in_form_validation_examples input:valid {
+    border: 2px solid black;
+}
+
+#constraining_the_length div {
+    margin-bottom: 10px;
+}
+
+#full_example form {
+    font: 1em sans-serif;
+    max-width: 320px;
+}
+
+#full_example form > label{
+    display: block;
+    width: 100%;
+}
+
+#full_example input[type='email'],
+#full_example input[type='number'],
+#full_example input[type='text'],
+#full_example textarea,
+#full_example fieldset {
+    display: block;
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+#full_example input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+  
+#full_example input:focus:invalid {
+    box-shadow: none;
+}
+
+#validating_forms_using_javascript form {
+    max-width: 320px;
+}
+
+#validating_forms_using_javascript form label {
+    display: block;
+    width:  100%;
+    margin-bottom: 10px;
+}
+
+#validating_forms_using_javascript form input[type='email'] {
+    display: block;
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+#not_using_constraint_validation_api p *,
+#more_complex_custom_validation p * {
+    display: block;
+}
+
+#not_using_constraint_validation_api input[type='email'],
+#more_complex_custom_validation input[type='email'] {
+    appearance: none;
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+    font-family: inherit;
+    font-size: 90%;
+    box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+#not_using_constraint_validation_api input:invalid,
+#more_complex_custom_validation input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+#not_using_constraint_validation_api input:focus:invalid,
+#more_complex_custom_validation input:focus:invalid {
+    outline: none;
+}
+
+/* This is the style of our error messages */
+
+#not_using_constraint_validation_api .error,
+#more_complex_custom_validation .error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: border-box;
+}
+
+#not_using_constraint_validation_api .error.active,
+#more_complex_custom_validation .error.active {
+    padding: 0.3em;
+}
+
