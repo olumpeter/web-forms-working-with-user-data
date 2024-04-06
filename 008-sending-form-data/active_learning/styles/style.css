@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  max-width: 600px;
+  margin: 20px auto;
+  font: 1em sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.how_to_send_the_data > div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.how_to_send_the_data form {
+    max-width: 320px;
+}
+
+.how_to_send_the_data form div{
+    margin-bottom: 20px;
+}
+
+.how_to_send_the_data form > label{
+    display: block;
+    width: 100%;
+}
+
+.how_to_send_the_data input[type='text'] {
+    display: block;
+    width: 100%;
+    border: 1px solid #333;
+    margin-top: 10px;
+}
+
+
