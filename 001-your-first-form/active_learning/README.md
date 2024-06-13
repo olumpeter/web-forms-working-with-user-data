@@ -47,8 +47,8 @@ button will send their data to a web server.
 ## Active learning: Implementing our form HTML
 
 Ok, let's have a go at creating the HTML for our form. We will use the 
-following HTML elements: <form>, <label>, <input>, >textarea>, 
-and <button>.
+following HTML elements: `<form>`, `<label>`, `<input>`, `<textarea>`, 
+and `<button>`.
 
 Before you go any further, make a local copy of our simple HTML template — 
 you'll enter your form HTML into here.
