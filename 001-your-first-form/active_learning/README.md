@@ -12,7 +12,7 @@ A web form's HTML is made up of one or more **form controls** (sometimes called
 **widgets**), plus some additional elements to help structure the overall form — 
 they are often referred to as **HTML forms**. The controls can be single or 
 multi-line text fields, dropdown boxes, buttons, checkboxes, or radio 
-buttons, and are mostly created using the &lt;input&gt; element, although 
+buttons, and are mostly created using the <input> element, although 
 there are some other elements to learn about too.
 
 Form controls can also be programmed to enforce specific formats or values to 
@@ -47,15 +47,15 @@ button will send their data to a web server.
 ## Active learning: Implementing our form HTML
 
 Ok, let's have a go at creating the HTML for our form. We will use the 
-following HTML elements: &lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &gt;textarea&gt;, 
-and &lt;button&gt;.
+following HTML elements: <form>, <label>, <input>, >textarea>, 
+and <button>.
 
 Before you go any further, make a local copy of our simple HTML template — 
 you'll enter your form HTML into here.
 
-## The &lt;form&gt; element
+## The <form> element
 
-All forms start with a &lt;form&gt; element, like this:
+All forms start with a <form> element, like this:
 
 ```html
 <form action='/my-handling-form-page' method='post'>
@@ -64,7 +64,7 @@ All forms start with a &lt;form&gt; element, like this:
 ```
 
 This element formally defines a form. It's a container element like a 
-&lt;section&gt; or &lt;footer&gt; element, but specifically for containing 
+<section> or <footer> element, but specifically for containing 
 forms; it also supports some specific attributes to configure the way the 
 form behaves. All of its attributes are optional, but it's standard practice 
 to always set at least the action and method attributes:
@@ -74,22 +74,22 @@ collected data should be sent when it is submitted.
 - The `method` attribute defines which HTTP method to send the data with 
 (usually `get` or `post`).
 
-For now, add the above &lt;form&gt; element into your HTML &lt;body&gt;.
+For now, add the above <form> element into your HTML <body>.
 
-### The &lt;label&gt;, &lt;input&gt;, and &lt;textarea&gt; elements
+### The <label>, <input>, and <textarea> elements
 
 Our contact form is not complex: the data entry portion contains three text 
-fields, each with a corresponding &lt;label&gt;:
+fields, each with a corresponding <label>:
 
   - The input field for the name is a single-line text field.
   - The input field for the email is an input of type email: a single-line 
   text field that accepts only email addresses.
-  - The input field for the message is a `&lt;textarea&gt;;` a multiline text 
+  - The input field for the message is a `<textarea>;` a multiline text 
   field.
 
-The `&lt;li&gt;` elements are there to conveniently structure our code and make 
+The `<li>` elements are there to conveniently structure our code and make 
 styling easier. For usability and accessibility, we include an explicit label 
-for each form control. Note the use of the for attribute on all `&lt;label&gt;` 
+for each form control. Note the use of the for attribute on all `<label>` 
 elements, which takes as its value the id of the form control with which it 
 is associated — this is how you associate a form control with its label.
 
@@ -98,9 +98,9 @@ control, enabling mouse, trackpad, and touch device users to click on the
 label to activate the corresponding control, and it also provides an accessible 
 name for screen readers to read out to their users.
 
-On the `&lt;input&gt;` element, the most important attribute is the `type` 
+On the `<input>` element, the most important attribute is the `type` 
 attribute. This attribute is extremely important because it defines the way 
-the &lt;input&gt; element appears and behaves.
+the <input> element appears and behaves.
 
 - In our simple example, we use the value `text` for the first input — the 
 default value for this attribute. It represents a basic single-line text field 
@@ -113,20 +113,20 @@ also causes a more appropriate keyboard layout for entering email addresses
 (e.g. with an @ symbol by default) to appear on devices with dynamic 
 keyboards, like smartphones.
 
-Last but not least, note the syntax of `&lt;input&gt;` vs. `&lt;textarea&gt;&lt;/textarea&gt;`. 
-This is one of the oddities of HTML. The `&lt;input&gt;` tag is a void element, 
-meaning that it doesn't need a closing tag. `&lt;textarea&gt;` is not a void 
+Last but not least, note the syntax of `<input>` vs. `<textarea></textarea>`. 
+This is one of the oddities of HTML. The `<input>` tag is a void element, 
+meaning that it doesn't need a closing tag. `<textarea>` is not a void 
 element, meaning it should be closed with the proper ending tag. This has an 
 impact on a specific feature of forms: the way you define the default value. 
-To define the default value of an `&lt;input&gt;` element you have to use the 
+To define the default value of an `<input>` element you have to use the 
 value attribute like this:
 
 ```html
 <input type='text' value='by default this element is filled with this text' />
 ```
 
-On the other hand, if you want to define a default value for a `&lt;textarea&gt;`, 
-you put it between the opening and closing tags of the `&lt;textarea&gt;` 
+On the other hand, if you want to define a default value for a `<textarea>`, 
+you put it between the opening and closing tags of the `<textarea>` 
 element, like this:
 
 ```html
@@ -135,17 +135,17 @@ element, like this:
 </textarea>
 ```
 
-### The `&lt;button&gt;` element
+### The `<button>` element
 
 The markup for our form is almost complete; we just need to add a button to 
 allow the user to send, or 'submit', their data once they have filled out the 
-form. This is done by using the &lt;button&gt; element.
+form. This is done by using the <button> element.
 
-The &gt;button&lt; element also accepts a type attribute — this accepts one 
+The >button< element also accepts a type attribute — this accepts one 
 of three values: `submit`, `reset`, or `button`.
 
 - A click on a `submit` button (the default value) sends the form's data to 
-the web page defined by the action attribute of the &lt;form&gt; element.
+the web page defined by the action attribute of the <form> element.
 - A click on a `reset` button resets all the form widgets to their default 
 value immediately. From a UX point of view, this is considered bad practice, 
 so you should avoid using this type of button unless you really have a good 
@@ -155,10 +155,10 @@ amazingly useful for building custom buttons — you can define their chosen
 functionality with JavaScript.
 
 
->** Note**: You can also use the `&lt;input&gt;` element with the corresponding 
-type to produce a button, for example `&lt;input type='submit'&gt;`. The main 
-advantage of the &lt;button&gt; element is that the `&lt;input&gt;` element 
-only allows plain text in its label whereas the &lt;button&gt; element allows 
+>** Note**: You can also use the `<input>` element with the corresponding 
+type to produce a button, for example `<input type='submit'>`. The main 
+advantage of the <button> element is that the `<input>` element 
+only allows plain text in its label whereas the <button> element allows 
 full HTML content, allowing more complex, creative button content.
 
 ## Basic form styling
@@ -173,7 +173,7 @@ get you to add some CSS to make it look OK.
 ## Sending form data to your web server
 
 The last part, and perhaps the trickiest, is to handle form data on the server 
-side. The `&lt;form&gt;` element defines where and how to send the data thanks 
+side. The `<form>` element defines where and how to send the data thanks 
 to the `action` and `method` attributes.
 
 We provide a `name` attribute for each form control. The names are important 
